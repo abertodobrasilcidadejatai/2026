@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aberto do Brasil de Xadrez - Jataí/GO</title>
+    <title>Aberto do Brasil de Xadrez 2026 - Jataí/GO</title>
     <style>
         * {
             margin: 0;
@@ -84,7 +84,7 @@
 <body>
     <header>
         <h1>Aberto do Brasil de Xadrez Jataí-Go</h1>
-        <p class="event-date">Em de Novembro de 2025 | Jataí/GO</p>
+        <p class="event-date">Em de Novembro de 2026 | Jataí/GO</p>
     </header>
 
     <div class="container">
