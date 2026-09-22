@@ -169,34 +169,36 @@
                         }
                     </style>
                 </head>
+                
                 <body>
-                    <h1>Formulário de Inscrição</h1>
-                    <form id="inscriptionForm" action="https://formspree.io/f/mljdboak" method="post" enctype="text/plain">
-                        <label for="nome">Nome completo:</label>
-                        <input type="text" id="nome" name="nome" required>
-                        
-                        <label for="numeroFide">Número FIDE "se houver":</label>
-                        <input type="text" id="númerofide"sehouver"" name="númerofide"sehouver"" required>
+<h1>Formulário de Inscrição</h1>
+<form id="inscriptionForm" action="https://formspree.io/f/mljdboak" method="POST">
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" required>
 
-                        <label for="numeroFide">CBX:</label>https://formspree.io/f/mljdboak
-                        <input type="text" id="cbx" name="cbx" required>
-                        
-                        <label for="cpf">CPF:</label>
-                        <input type="text" id="cpf" name="cpf" required>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+    <label for="numeroFide">Número FIDE (se houver):</label>
+    <input type="text" id="numeroFide" name="numeroFide">
 
- <label for="telefone">Nº Telefone:</label>
-                        <input type="telefone" id="telefone" name="telefone" required>
-                        
-                        <label for="cidade">Cidade que representa:</label>
-                        <input type="text" id="cidade" name="cidade" required>
-                        
-                        <label>Categoria:</label>
-                         <label><input type="checkbox" name="jogarPensado" value="sim"> Irá jogar "Pensado"</label>
-                        
-                        <button type="submit">Enviar</button>
+    <label for="cbx">ID CBX:</label>
+    <input type="text" id="cbx" name="cbx" required>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Nº Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <label for="cidade">Cidade que representa:</label>
+    <input type="text" id="cidade" name="cidade" required>
+
+    <label>Categoria:</label>
+    <label><input type="checkbox" name="jogarPensado" value="sim"> Irá jogar "Pensado"</label>
+
+    <button type="submit">Enviar</button>
+</form>
                     </form>
                 </body>
                 </html>
