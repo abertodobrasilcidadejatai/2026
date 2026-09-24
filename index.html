@@ -8,6 +8,7 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
         body {
@@ -21,17 +22,17 @@
             padding: 2rem 0;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
         .event-date {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
         section {
             background: white;
@@ -54,232 +55,198 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
             transition: background 0.3s;
         }
         .btn:hover {
             background: #2a5298;
         }
+        .btn-secondary {
+            background: #666;
+        }
+        .btn-secondary:hover {
+            background: #444;
+        }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
         .gallery img {
             width: 100%;
+            height: 180px;
+            object-fit: cover;
             border-radius: 5px;
             transition: transform 0.3s;
         }
         .gallery img:hover {
             transform: scale(1.03);
         }
+        /* Estilização dos Campos do Formulário */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
         footer {
             text-align: center;
             padding: 1.5rem;
             background: #1e3c72;
             color: white;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Aberto do Brasil de Xadrez Jataí-Go - </h1>
+        <h1>Aberto do Brasil de Xadrez Jataí-GO</h1>
         <h1>15 mil reais em Premiação</h1>
         <p class="event-date">31, 01 e 02 de Novembro de 2026 | Jataí/GO</p>
-         <p class="event-date">Inscrição gratuita</p>
+        <p class="event-date">Inscrição gratuita</p>
     </header>
-<div style="text-align: center; margin-top: 10px;">
-  <img 
-    src="https://raw.githubusercontent.com/abertodobrasilcidadejatai/2026/refs/heads/main/Aberto%20do%20Brasil%20Jatai.jpeg.jpeg" 
-    alt="Aberto do Brasil Jataí" 
-    style="max-width: 50%; height: auto; border-radius: 8px;"
-  >
-</div>
-    <div style="background-color: #99b7e3; padding: 10px; text-align: center;">
-  <a 
-    href="https://s2.chess-results.com/Tnr1501721.aspx?lan=10&SNode=S0" 
-    target="_blank"
-    style="color: #0e1d34; font-weight: bold; text-decoration: none;"
-  >
-    🎯 CONFIRA A LISTA DE INSCRITOS NO CHESSRESULTS →
-  </a>
-</div>
+
+    <div style="text-align: center; margin-top: 15px;">
+        <img 
+            src="https://raw.githubusercontent.com/abertodobrasilcidadejatai/2026/refs/heads/main/Aberto%20do%20Brasil%20Jatai.jpeg.jpeg" 
+            alt="Aberto do Brasil Jataí" 
+            style="max-width: 90%; width: 500px; height: auto; border-radius: 8px;"
+        >
+    </div>
+
+    <div style="background-color: #99b7e3; padding: 12px; text-align: center; margin-top: 15px;">
+        <a 
+            href="https://s2.chess-results.com/Tnr1501721.aspx?lan=10&SNode=S0" 
+            target="_blank"
+            style="color: #0e1d34; font-weight: bold; text-decoration: none;"
+        >
+            🎯 CONFIRA A LISTA DE INSCRITOS NO CHESSRESULTS →
+        </a>
+    </div>
+
     <div class="container">
         <!-- Seção: Sobre o Evento -->
         <section>
             <h2>Sobre o Torneio</h2>
-            
-            <p style="text-align: justify;"> <style="line-height: 2.0;">
-            <p>O Aberto do Brasil de Xadrez reunirá os melhores enxadristas do país em Jataí/GO para disputas emocionantes.
-                É uma promoção da Prefeitura Municipal de Jataí com o Clube de Xadrez de Jataí, juntamente com a  Confederação Brasileira de Xadrez e Federação de Xadrez do Estado de Goiás. Participe!</p></p>
-        </section></style>
+            <p style="line-height: 1.6; text-align: justify;">
+                O Aberto do Brasil de Xadrez reunirá os melhores enxadristas do país em Jataí/GO para disputas emocionantes.
+                É uma promoção da Prefeitura Municipal de Jataí com o Clube de Xadrez de Jataí, juntamente com a Confederação Brasileira de Xadrez e Federação de Xadrez do Estado de Goiás. Participe!
+            </p>
+        </section>
 
         <!-- Seção: Regulamento -->
         <section>
             <h2>Regulamento Oficial</h2>
-                      <!-- Substitua "#" pelo link do PDF quando estiver pronto -->
-           <a href="https://drive.google.com/file/d/1ZddWaQn9jL5EArEO4DD-D4Gcllgy9GsN/view?usp=sharing" target="_blank" class="btn" style="background: #666;">Baixar Regulamento</a>
+            <a href="https://drive.google.com/file/d/1ZddWaQn9jL5EArEO4DD-D4Gcllgy9GsN/view?usp=sharing" target="_blank" class="btn btn-secondary">Baixar Regulamento</a>
         </section>
 
         <!-- Seção: Inscrição -->
         <section>
             <h2>Inscrições</h2>
-            <style="line-height: 2.0;">
-                 <p><b><span style="color: red;">ATENÇÃO ANTES DE PREENCHER A INSCRIÇÃO </b></p></span>
-                    <p></p>
-            <p><span style="color: green;">SOMENTE SERÁ VALIDADA SE O ATLETA ESTIVER INSCRITO E PAGO A CBX</p></span>
-            <p></p>
-                    <a href="https://www.cbx.org.br/cadastro" <button class="btn" style="background: #666; width: 100px; height: 15px; font-size: 12px;">CADASTRO CBX</button></a>
-            <hr></hr>
-            </p></style>
-            <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #formFolder {
-            display: none; /* Esconde o formulário inicialmente */
-            margin-top: 20px;
-        }
-    </style>
-    <script>
-        function abrirFormulario() {
-            const newWindow = window.open("", "_blank");
-            newWindow.document.write(`
-                <!DOCTYPE html>
-                <html lang="pt-BR">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Formulário de Inscrição</title>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            margin: 20px;
-                        }
-                        input, button {
-                            margin: 10px 0;
-                            display: block;
-                        }
-                    </style>
-                </head>
-                
-                <body>
-<h1>Formulário de Inscrição</h1>
-<form id="inscriptionForm" action="https://formsubmit.co/celioplimabkp@gmail.com" method="POST">
-    <!-- Esta linha remove a verificação de captcha do FormSubmit -->
-    <input type="hidden" name="_captcha" value="false">
+            
+            <p style="color: red; font-weight: bold; margin-bottom: 0.5rem;">ATENÇÃO ANTES DE PREENCHER A INSCRIÇÃO</p>
+            <p style="color: green; font-weight: bold; margin-bottom: 1rem;">SOMENTE SERÁ VALIDADA SE O ATLETA ESTIVER INSCRITO E PAGO A CBX</p>
+            
+            <a href="https://www.cbx.org.br/cadastro" target="_blank" class="btn btn-secondary" style="font-size: 13px; padding: 0.5rem 1rem; margin-bottom: 1.5rem;">CADASTRO CBX</a>
+            
+            <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee;">
 
-    <!-- Redireciona o enxadrista de volta ao seu site após enviar -->
-    <input type="hidden" name="_next" value="https://abertodobrasilcidadejatai.github.io/2026/">
-
-    <label for="nome">Nome completo:</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="numeroFide">Número FIDE (se houver):</label>
-    <input type="text" id="numeroFide" name="numeroFide">
-
-    <label for="cbx">ID CBX:</label>
-    <input type="text" id="cbx" name="cbx" required>
-
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required>
-
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="telefone">Nº Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required>
-
-    <label for="cidade">Cidade que representa:</label>
-    <input type="text" id="cidade" name="cidade" required>
-
-    <label>Categoria:</label>
-    <label><input type="checkbox" name="jogarPensado" value="sim"> Irá jogar "Pensado"</label>
-
-    <button type="submit">Enviar Inscrição</button>
-</form>
-</form>
-                    </form>
-                </body>
-                </html>
-            `);
-            newWindow.document.close();
-        }
-    </script>
-</head>
-<body>
-    <h1>Bem-vindo ao nosso evento!</h1>
-</body>
-</html>
-            <form action="https://formsubmit.co/seu-email@aqui.com" method="POST">
+            <!-- Formulário Oficial FormSubmit -->
+            <form id="inscriptionForm" action="https://formsubmit.co/celioplimabkp@gmail.com" method="POST">
+                <!-- Desativa o Captcha interativo -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Redireciona de volta após o envio -->
+                <input type="hidden" name="_next" value="https://abertodobrasilcidadejatai.github.io/2026/">
+                <!-- Assunto personalizado do e-mail -->
                 <input type="hidden" name="_subject" value="Nova inscrição - Aberto do Brasil de Xadrez">
-                <button onclick="abrirFormulario()" button type="submit" class="btn">Realizar Inscrição</button>
+
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="Nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numeroFide">Número FIDE (se houver):</label>
+                    <input type="text" id="numeroFide" name="ID FIDE">
+                </div>
+
+                <div class="form-group">
+                    <label for="cbx">ID CBX:</label>
+                    <input type="text" id="cbx" name="ID CBX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="CPF" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="E-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Nº Telefone:</label>
+                    <input type="tel" id="telefone" name="Telefone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade">Cidade que representa:</label>
+                    <input type="text" id="cidade" name="Cidade" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="jogarPensado" name="Irá Jogar Pensado" value="Sim">
+                    <label for="jogarPensado" style="margin-bottom: 0;">Irá jogar "Pensado"</label>
+                </div>
+
+                <button type="submit" class="btn">Enviar Inscrição</button>
             </form>
         </section>
-<script>
-    document.querySelector('form').addEventListener('submit', function(event) {
-        alert('Inscrição realizada com sucesso!');
-    });
-</script>
 
         <!-- Seção: Conheça Jataí -->
         <section>
             <h2>Conheça Jataí</h2>
-            <p>A cidade de Jataí, no sudoeste goiano, é conhecida por sua cultura, gastronomia e belezas naturais.</p>
+            <p style="margin-bottom: 1rem;">A cidade de Jataí, no sudoeste goiano, é conhecida por sua cultura, gastronomia e belezas naturais.</p>
+            
             <div class="gallery">
-                <!-- fotos reais de Jataí (substitua os links) -->
                 <a href="https://www.guiaturisticodegoias.com.br/cidades-turisticas/32-jatai/atracoes-turisticas/188-lago-bomsucesso" target="_blank">
-                <img src="https://www.guiaturisticodegoias.com.br/galery/lago-bomsucesso-439.jpg" width="50%" height="50%"></a>
-<a href="https://thileparkhotel.com.br/">
-                <img src="https://thile-park-hotel.centro-oeste-do-brasil-hoteis.com/data/Images/OriginalPhoto/15566/1556677/1556677336/image-jatai-thile-park-hotel-10.JPEG" width="50%" height="50%"></a>
-<a href="https://www.jatai.go.gov.br/" target="_blank">
-                <img src="https://wp.es.aleteia.org/wp-content/uploads/sites/7/2021/05/WEB3-01-CATHEDRAL-ESPIRITU-SANTO-JATAI-BRAZIL-Facebook-pascomcaredraldejatai.jpg?w=620&h=310&crop=1" alt="Jataí - Catedral" width="50%" height="50%">
-            </div></a>
+                    <img src="https://www.guiaturisticodegoias.com.br/galery/lago-bomsucesso-439.jpg" alt="Lago Bonsucesso">
+                </a>
+                <a href="https://thileparkhotel.com.br/" target="_blank">
+                    <img src="https://thile-park-hotel.centro-oeste-do-brasil-hoteis.com/data/Images/OriginalPhoto/15566/1556677/1556677336/image-jatai-thile-park-hotel-10.JPEG" alt="Thile Park Hotel">
+                </a>
+                <a href="https://www.jatai.go.gov.br/" target="_blank">
+                    <img src="https://wp.es.aleteia.org/wp-content/uploads/sites/7/2021/05/WEB3-01-CATHEDRAL-ESPIRITU-SANTO-JATAI-BRAZIL-Facebook-pascomcaredraldejatai.jpg?w=620&h=310&crop=1" alt="Catedral de Jataí">
+                </a>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 Aberto do Brasil Cidade Jataí 2026 - Todos os direitos reservados. Clube de Xadrez de Jataí - </p>
-        <p>- Página criada pelo Mestre Nacional Uelton Fabricius- Contato sobre o evento camposwesterley@gmail.com</p>
+        <p>© 2026 Aberto do Brasil Cidade Jataí - Todos os direitos reservados. Clube de Xadrez de Jataí</p>
+        <p>Página criada pelo Mestre Nacional Uelton Fabricius - Contato sobre o evento: camposwesterley@gmail.com</p>
     </footer>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
